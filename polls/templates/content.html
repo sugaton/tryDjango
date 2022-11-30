@@ -1,0 +1,26 @@
+<h3> hello </h3>
+<div class="row justify-content-center align-items-center g-2">
+
+<div class="col-4">
+    
+<div class="list-group" id="list-tab" role="tablist">
+    {% for item in  items%}
+     <a class="list-group-item list-group-item-action" id="list-{{item}}-list" data-bs-toggle="list" href="#list-{{item}}" role="tab" aria-controls="list-{{item}}">
+        {{ item }}
+    </a>
+    {% endfor %}
+</div>
+</div>
+
+
+<div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+    {% for item in  items%}
+    <div class="tab-pane fade" id="list-{{item}}" role="tabpanel" aria-labelledby="list-{{item}}-list">
+    <p> this item is {{ item }}</p>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+</div>
