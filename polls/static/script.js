@@ -52,7 +52,9 @@ $('#ajax-form').on('submit', function(e) {
         $('#result').html("<p>failed ! </p>")
     });
 });
-
-$(document).ready( function() {
-  tabify( '#list-tab' );
+  //.accordion_oneの中の.accordion_headerがクリックされたら
+$('.acc_btn').click(function(){
+//クリックされた.accordion_oneの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
+$(this).next().slideToggle();
+$(this).toggleClass("open");
 });

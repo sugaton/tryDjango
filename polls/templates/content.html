@@ -1,6 +1,7 @@
 <h3> hello </h3>
 <div class="row justify-content-center align-items-center g-2">
 
+   <!--     --> 
 <div class="col-4">
     
 <div class="list-group" id="list-tab" role="tablist">
@@ -10,17 +11,59 @@
     </a>
     {% endfor %}
 </div>
+
 </div>
+   <!--     --> 
 
 
 <div class="col-8">
+        <div class="bg-gray">
     <div class="tab-content" id="nav-tabContent">
+
     {% for item in  items%}
     <div class="tab-pane fade" id="list-{{item}}" role="tabpanel" aria-labelledby="list-{{item}}-list">
-    <p> this item is {{ item }}</p>
+
+    <div class = "row">
+        <div class="col-4">
+        <p> this item is {{ item }}</p>
+        </div>
+
+   <!-- ---------accordion-area---------     --> 
+        <div class="col-8">
+            <div class="acc">
+            <div class="acc_btn">
+                AAA
+            </div>
+            <div class="acc_next">
+                <div class="acc_btn">
+               1 
+                </div>
+                <div class="acc_next">
+                <div class="acc_btn">
+                2
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+  <!-- ---------accordion-area end---------     --> 
+    </div>
+   <!-- ---------row end---------     --> 
     </div>
     {% endfor %}
-    </div>
-</div>
 
+    </div>
+        </div>
 </div>
+   <!-- --------col-8 end---------     --> 
+</div>
+<script>
+$(function(){
+  //.accordion_oneの中の.accordion_headerがクリックされたら
+  $('.acc_btn').click(function(){
+    //クリックされた.accordion_oneの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
+    $(this).next().slideToggle();
+    $(this).toggleClass("open");
+  });
+});
+</script>

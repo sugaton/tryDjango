@@ -1,3 +1,8 @@
 .bd-navbar{padding:.75rem 0;background-color:#073f74fa}
 .container{margin:.75rem; }
 .margin-main{margin-left: 2rem; }
+.bg-gray{background-color:rgba(244, 247, 255, 0.685);block-size: 10rem;}
+
+
+.acc{background-color: rgba(219, 226, 226, 0.918);}
+.acc_next{background-color: rgb(238, 238, 238); padding-left: 2em;}
